@@ -19,7 +19,6 @@ class App extends Component {
     const skills = ["No skills", "To pay the bills", "But I have 5 FLB", "Chev Swords", ";____;"];
     this.setState({ tools: tools, future: future, skills: skills })
   }
-  //onClick: filtteröi näkyviä kursseja klikatun tägin mukaan
 
   render() {
 
@@ -35,23 +34,22 @@ class App extends Component {
         <div className="divider"></div>
         <div className="summary">
           <div className="summary1">
-            <span className="summeryh">Tools</span>
+            <span className="summaryh">Current tools</span>
             {this.state.tools && <ul>{this.state.tools.map(t => <li key={t}>{t}</li>)}
             </ul>}
           </div>
           <div className="summary2">
-            <span className="summeryh">Future</span>
+            <span className="summaryh">Future</span>
             {this.state.future && <ul>{this.state.future.map(t => <li key={t}>{t}</li>)}
               </ul>}
           </div>
           <div className="summary3">
-            <span className="summeryh">Skills</span>
+            <span className="summaryh">Skills</span>
             {this.state.skills && <ul>{this.state.skills.map(t => <li key={t}>{t}</li>)}
               </ul>}
           </div>
         </div>
         <Project />
-        <div className="divider"></div>
       </div>
     );
   }
