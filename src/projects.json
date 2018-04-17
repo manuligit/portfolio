@@ -1,0 +1,61 @@
+{ "projects" : [
+    { "project": "Ohjelmistotuotantoprojekti",
+      "description" : "Android wearable-laitteelle tehty projekti, jonka avulla voidaan kerätä dataa laitteen sensoreista tietokantaan tai tehdä niistä reaaliaikaisia graafeja.",
+      "keywords": ["Java", "Android", "Android Wear", "SQLite", "Gradle", "Group Project"],
+      "link": "https://github.com/OhtuWearable",
+      "extra": "http://projekti.cs.helsinki.fi/projects/middleware-for-wearable-devices"
+    },
+    { "project": "Software Factory Project",
+      "description" : "CI&CD-järjestelmä Jenkinsillä sekä Android- että iOS-applikaatioille.  Applikaation github-repositorioon pushatessa/pull requestin tehdessä Jenkins buildaa, testaa sekä luo sovelluskauppaan soveltuvan applikaation. Kommunikaatio projektin aikana tapahtui kokonaan englanniksi.",
+      "keywords": ["Jenkins", "Docker", "Continuous Integration", "Continuous Deployment", "Swift", "Group Project"],
+      "link": ""
+    },
+    { "project": "Web-palvelinohjelmoinnin harjoitustyö",
+      "description" : "Sivu, johon käyttäjät voivat lisätä flash/webm-tiedostoja.",
+      "keywords": ["Java", "Spring", "Travis", "Heroku", "HTML", "CSS", "Group Project"],
+      "link": "https://github.com/AlePaa/flashcan"
+    },
+
+    { "project": "Tietorakenteet ja algoritmit-harjoitustyö",
+      "description" : "Reitinhakualgoritmi, joka toimii ASCII-labyrinteilla.",
+      "keywords": ["Java", "Maven"],
+      "link": "https://github.com/manuligit/TiraLabra"
+    },
+    { "project": "Tämä portfolio!",
+      "description" : "Tämän portfolion luominen Reactilla.",
+      "keywords": ["React", "HTML", "CSS", "JSON", "Bootstrap 4", "Javascript"],
+      "link": "https://github.com/manuligit/portfolio/"
+    },
+     { "project": "Web-palvelinohjelmointi Java",
+      "description" : "Web-palvelinohjelmoinnin perusteita käyttäen Springiä.",
+      "keywords": ["Java", "Spring", "HTML", "CSS", "Angular", "Javascript", "JSON", "REST-rajapinnat"],
+      "extra": "http://web-palvelinohjelmointi.github.io/"
+    },
+
+    { "project": "Web-palvelinohjelmointi Ruby on Rails",
+      "description" : "Web-palvelinohjelmoinnin perusteita käyttäen Ruby on Railsia.",
+      "keywords": ["Rails", "Ruby", "HTML", "CSS", "Bootstrap"],
+      "link": ""
+    },
+    { "project": "Web-selainohjelmointi",
+      "description" : "Kurssi web-selainohjelmoinnin perusteista.",
+      "keywords": ["HTML", "CSS", "Javascript", "JQuery", "AngularJS", "Firebase", "Bootstrap"],
+      "extra": "http://web-selainohjelmointi.github.io/"
+    },
+    { "project": "Data Science-ryhmätyöprojekti",
+        "description" : "Pariprojekti, jossa yhdistimme dataa kahdesta avoimesta karttadatasta pandasin avulla, ja esitimme sen kartalla.",
+        "keywords": ["Python", "Pandas", "Javascript", "Group Project"],
+        "extra": "https://manuligit.github.io/buildings-of-helsinki/"
+    },
+    { "project": "Ostoskori-sivusto",
+        "description" : "Sivusto, jossa käyttäjät voi lisätä, poistaa ja päivittää tuotteita. Sivuston backend on yhdistettynä MongoDB-tietokantaan.",
+        "keywords": ["React", "Redux", "NodeJS", "ExpressJS", "Mongoose", "ES2015", "Jest", "Supertest", "Javascript", "HTML", "CSS"],
+        "extra": "https://github.com/manuligit/fs-projekti"
+    }
+],
+ "profile": {
+    "name": "Riina Väisänen",
+    "github": "manuligit",
+    "avatar": "https://avatars1.githubusercontent.com/u/6428403?v=3"
+ }
+}
