@@ -3,6 +3,12 @@ import Projects from '../projects.json'
 import Course from './Course'
 
 class Project extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      filter: []
+    };
+  }
 
   render() {
     return (

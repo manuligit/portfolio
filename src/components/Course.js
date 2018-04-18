@@ -1,13 +1,24 @@
 import React from 'react'
 
 class Course extends React.Component {
+  filter = (event) => {
+    event.preventDefault()
 
-  render() { 
+    console.log(event.target)
+    //this.setState({ filter= })
+
+    console.log('klik')
+  }
+
+
+
+  render() {
+
     return (
       <div className="course">
         <div className="leftBlock">
           <div className="project">{this.props.project.project}</div>
-          <div className="keywords">{this.props.project.keywords && this.props.project.keywords.map((k,i) => <span className="keyword" key={i}>{k.toUpperCase()}</span>)}</div>
+          <div className="keywords">{this.props.project.keywords && this.props.project.keywords.map((k,i) => <span className="keyword" key={i} onClick={this.filter}>{k.toUpperCase()}</span>)}</div>
         </div>
         <div className="rightBlock">
           <div className="description"><p>{this.props.project.description}</p></div>

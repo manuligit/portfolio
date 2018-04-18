@@ -5,8 +5,7 @@ import Project from './components/Project'
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      filter: [],
+    this.state = {
       tools: [],
       future: [],
       skills: []
