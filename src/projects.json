@@ -55,7 +55,11 @@
 ],
  "profile": {
     "name": "Riina Väisänen",
+    "location": "Helsinki, Finland",
     "github": "manuligit",
     "avatar": "https://avatars1.githubusercontent.com/u/6428403?v=3"
- }
+ },
+ "tools": ["Full Stack", "React", "Javascript", "Node", "Learning CSS"],
+ "future": ["Full Stack", "React", "Javascript", "Want to learn more CSS witchcraft", "FUNctional Programming"],
+ "skills": ["Fast learner", "Always willing to learn more", "But I have 5 FLB", "Bad jokes", "Expert beginner at playing Otamatone"]
 }

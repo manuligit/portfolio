@@ -2,7 +2,7 @@ import React from 'react'
 import Projects from '../projects.json'
 import Course from './Course'
 
-class Project extends React.Component {
+class ProjectList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,7 +31,7 @@ class Project extends React.Component {
       if (this.state.filter.length > 0) {
         return (
           <div className="filters">
-            <h1> Filters </h1>
+            <h1>Filters</h1>
               {this.state.filter.map((k,i) =>
                 <span className="keyword" key={i} onClick={() => this.removeFilter(k)}>{k.toUpperCase()}</span>)
               }
@@ -55,4 +55,4 @@ class Project extends React.Component {
 
 }
 
-export default Project
+export default ProjectList

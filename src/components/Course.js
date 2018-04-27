@@ -12,12 +12,12 @@ class Course extends React.Component {
         return this.props.filter.indexOf((n)) !== -1;
       })
 
-      if (words.length === 0) {
+      if (words.length != this.props.filter.length) {
         return (<div style={{display: 'none'}}></div>)
       }
-      console.log(this.props.filter)
-      console.log(this.props.project.keywords)
-      console.log(words)
+      //console.log(this.props.filter)
+      //console.log(this.props.project.keywords)
+      //console.log(words)
      }
 
     return (

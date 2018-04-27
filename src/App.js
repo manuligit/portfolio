@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './App.css'
-import Project from './components/Project'
+import ProjectList from './components/ProjectList'
+import Summary from './components/Summary'
+import Projects from './projects.json'
 
 class App extends Component {
   constructor(props) {
@@ -8,47 +10,34 @@ class App extends Component {
     this.state = {
       tools: [],
       future: [],
-      skills: []
+      skills: [],
+      name: '',
+      location: ''
     };
   }
 
   componentDidMount() {
-    const tools = ["Full Stack", "React", "Javascript", "Node", "Snibedi snab"];
-    const future = ["Full Stack", "React", "Javascript", "My Little Front End: CSS is Magic", "FUNctional Programming"];
-    const skills = ["No skills", "To pay the bills", "But I have 5 FLB", "Chev Swords", ";____;"];
-    this.setState({ tools: tools, future: future, skills: skills })
+    //Read items from JSON:
+    let tools = Projects.tools
+    let future = Projects.future
+    let skills = Projects.skills
+    let name = Projects.profile.name
+    let location = Projects.profile.location
+    this.setState({ tools: tools, future: future, skills: skills, name: name, location: location })
   }
 
   render() {
 
     return (
       <div className="App">
-        <div className="header">
-          <p><b>Hi.</b></p>
+        <header>
+          <p><strong>Hi.</strong></p>
           <p>This is a short header.</p>
-          <p>My name is <span className="hilight">Kari Kuusisaari.</span></p>
-          <p>I'm from <span className="hilight">Sääksjärvi, Lempäälä.</span></p>
-        </div>
-        <h1>Summary</h1>
-        <div className="divider"></div>
-        <div className="summary">
-          <div className="summary1">
-            <span className="summaryh">Current tools</span>
-            {this.state.tools && <ul>{this.state.tools.map(t => <li key={t}>{t}</li>)}
-            </ul>}
-          </div>
-          <div className="summary2">
-            <span className="summaryh">Future</span>
-            {this.state.future && <ul>{this.state.future.map(t => <li key={t}>{t}</li>)}
-              </ul>}
-          </div>
-          <div className="summary3">
-            <span className="summaryh">Skills</span>
-            {this.state.skills && <ul>{this.state.skills.map(t => <li key={t}>{t}</li>)}
-              </ul>}
-          </div>
-        </div>
-        <Project />
+          <p>My name is <span className="hilight">{this.state.name}.</span></p>
+          <p>I'm from <span className="hilight">{this.state.location}.</span></p>
+        </header>
+        <Summary tools={this.state.tools} future={this.state.future} skills={this.state.skills}/>
+        <ProjectList />
       </div>
     );
   }
