@@ -10,11 +10,13 @@ class ProjectList extends React.Component {
     };
   }
 
-  addFilter = (k, event) => {
-    console.log(k)
-    let newFilter = [].concat(this.state.filter)
-    newFilter.push(k)
-    this.setState ({ filter: newFilter })
+  addFilter = (item, event) => {
+    //If filter doesn't contain the keyword, add it to current filter:
+    if (this.state.filter.indexOf(item) === (-1)) {
+      let newFilter = [].concat(this.state.filter)
+      newFilter.push(item)
+      this.setState ({ filter: newFilter })
+    }
   }
 
   removeFilter = (k, event) => {
@@ -31,13 +33,12 @@ class ProjectList extends React.Component {
       if (this.state.filter.length > 0) {
         return (
           <div className="filters">
-            <h1>Filters</h1>
+            <h2>Filters</h2>
               {this.state.filter.map((k,i) =>
                 <span className="keyword" key={i} onClick={() => this.removeFilter(k)}>{k.toUpperCase()}</span>)
               }
           <br />
           </div>
-          
         )
     }}
 
@@ -52,7 +53,6 @@ class ProjectList extends React.Component {
             <div className="divider"></div></div>)}
       </div>
   )}
-
 }
 
 export default ProjectList
