@@ -23,7 +23,7 @@ class ProjectList extends React.Component {
     if (this.state.filter.length === 1) { 
       this.setState({ filter: [] })
     } else {
-      let newFilter = this.state.filter.filter(n=> n != k)
+      let newFilter = this.state.filter.filter(n=> n !== k)
       this.setState({ filter: newFilter })
     }
   }

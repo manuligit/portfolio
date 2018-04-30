@@ -1,8 +1,5 @@
 import React from 'react'
 
-const Tag = ({ text }) =>
-<span>{text}</span>;
-
 class Course extends React.Component {
   
   render() {
@@ -12,7 +9,7 @@ class Course extends React.Component {
         return this.props.filter.indexOf((n)) !== -1;
       })
 
-      if (words.length != this.props.filter.length) {
+      if (words.length !== this.props.filter.length) {
         return (<div style={{display: 'none'}}></div>)
       }
       //console.log(this.props.filter)
