@@ -1,54 +1,54 @@
 { "projects" : [
-    { "project": "Ohjelmistotuotantoprojekti",
-      "description" : "Android wearable-laitteelle tehty projekti, jonka avulla voidaan kerätä dataa laitteen sensoreista tietokantaan tai tehdä niistä reaaliaikaisia graafeja.",
+    { "project": "Software Engineering Lab",
+      "description" : "A project for Android wearable-devices. The foces was on collecting sensor data from the device to a database and creating graphs in real time.",
       "keywords": ["Java", "Android", "Android Wear", "SQLite", "Gradle", "Group Project"],
       "link": "https://github.com/OhtuWearable",
       "extra": "http://projekti.cs.helsinki.fi/projects/middleware-for-wearable-devices"
     },
     { "project": "Software Factory Project",
-      "description" : "CI&CD-järjestelmä Jenkinsillä sekä Android- että iOS-applikaatioille.  Applikaation github-repositorioon pushatessa/pull requestin tehdessä Jenkins buildaa, testaa sekä luo sovelluskauppaan soveltuvan applikaation. Kommunikaatio projektin aikana tapahtui kokonaan englanniksi.",
+      "description" : "CI&CD-system for Android- and iOS-applications using Jenkins.  When a pull request or push is made to the github repository Jenkins builds, tests, and creates an application that is ready to be deployed to store.",
       "keywords": ["Jenkins", "Docker", "Continuous Integration", "Continuous Deployment", "Swift", "Group Project"],
       "link": ""
     },
-    { "project": "Web-palvelinohjelmoinnin harjoitustyö",
-      "description" : "Sivu, johon käyttäjät voivat lisätä flash/webm-tiedostoja.",
+    { "project": "Server-side web programming assignment",
+      "description" : "A page, where users can register and add flash- or webm files.",
       "keywords": ["Java", "Spring", "Travis", "Heroku", "HTML", "CSS", "Group Project"],
       "link": "https://github.com/AlePaa/flashcan"
     },
 
-    { "project": "Tietorakenteet ja algoritmit-harjoitustyö",
-      "description" : "Reitinhakualgoritmi, joka toimii ASCII-labyrinteilla.",
+    { "project": "Data structures and algorithms assignment",
+      "description" : "Pathing algorithm, which can map the fastest path inside an ASCII labyrinth.",
       "keywords": ["Java", "Maven"],
       "link": "https://github.com/manuligit/TiraLabra"
     },
-    { "project": "Tämä portfolio!",
-      "description" : "Tämän portfolion luominen Reactilla.",
-      "keywords": ["React", "HTML", "CSS", "JSON", "Bootstrap 4", "Javascript"],
+    { "project": "This portfolio!",
+      "description" : "Creating this portfolio using React.",
+      "keywords": ["React", "HTML", "CSS", "JSON","Javascript"],
       "link": "https://github.com/manuligit/portfolio/"
     },
-     { "project": "Web-palvelinohjelmointi Java",
-      "description" : "Web-palvelinohjelmoinnin perusteita käyttäen Springiä.",
+     { "project": "Server-side web programming Java",
+      "description" : "Basics of Server-side website programming using Spring.",
       "keywords": ["Java", "Spring", "HTML", "CSS", "Angular", "Javascript", "JSON", "REST-rajapinnat"],
       "extra": "http://web-palvelinohjelmointi.github.io/"
     },
 
-    { "project": "Web-palvelinohjelmointi Ruby on Rails",
-      "description" : "Web-palvelinohjelmoinnin perusteita käyttäen Ruby on Railsia.",
+    { "project": "Server-side web programming Ruby on Rails",
+      "description" : "Basics of Server-side website programming using Ruby on Rails.",
       "keywords": ["Rails", "Ruby", "HTML", "CSS", "Bootstrap"],
       "link": ""
     },
-    { "project": "Web-selainohjelmointi",
-      "description" : "Kurssi web-selainohjelmoinnin perusteista.",
-      "keywords": ["HTML", "CSS", "Javascript", "JQuery", "AngularJS", "Firebase", "Bootstrap"],
+    { "project": "Front end programming",
+      "description" : "A course about the basics of front end programming.",
+      "keywords": ["HTML", "CSS", "Javascript", "JQuery", "AngularJS", "Firebase", "Bootstrap", "Netbeans", "Firebase", "NodeJS"],
       "extra": "http://web-selainohjelmointi.github.io/"
     },
-    { "project": "Data Science-ryhmätyöprojekti",
-        "description" : "Pariprojekti, jossa yhdistimme dataa kahdesta avoimesta karttadatasta pandasin avulla, ja esitimme sen kartalla.",
-        "keywords": ["Python", "Pandas", "Javascript", "Group Project"],
+    { "project": "Data Science-group project",
+        "description" : "A pair project, where we combined data of Helsinki from two data sources using Pandas, and showed them on a map.",
+        "keywords": ["Python", "Pandas", "Javascript", "Group Project", "Jupyter"],
         "extra": "https://manuligit.github.io/buildings-of-helsinki/"
     },
-    { "project": "Ostoskori-sivusto",
-        "description" : "Sivusto, jossa käyttäjät voi lisätä, poistaa ja päivittää tuotteita. Sivuston backend on yhdistettynä MongoDB-tietokantaan.",
+    { "project": "Ostoskori-page",
+        "description" : "Page, where users can add, favorite and browse their favorite products. The backend of the site is connected to a MongoDB-database.",
         "keywords": ["React", "Redux", "NodeJS", "ExpressJS", "Mongoose", "ES2015", "Jest", "Supertest", "Javascript", "HTML", "CSS"],
         "extra": "https://github.com/manuligit/fs-projekti"
     }
@@ -59,7 +59,7 @@
     "github": "manuligit",
     "avatar": "https://avatars1.githubusercontent.com/u/6428403?v=3"
  },
- "tools": ["Full Stack", "React", "Javascript", "Node", "Learning CSS"],
- "future": ["Full Stack", "React", "Javascript", "Want to learn more CSS witchcraft", "FUNctional Programming"],
+ "tools": ["Full Stack", "React", "Javascript", "Node.js", "CSS"],
+ "future": ["More Full Stack", "React", "More Javascript", "Want to learn more CSS witchcraft", "FUNctional Programming"],
  "skills": ["Fast learner", "Always willing to learn more", "Bad jokes", "Expert beginner at playing Otamatone"]
 }

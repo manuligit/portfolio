@@ -34,7 +34,6 @@ h1{
 .summary {
   margin: 4rem 0 2rem 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   font-size: 24px;
 }
 
@@ -70,24 +69,46 @@ a {
 .filters {
   margin-bottom: 1rem;
 }
+@media (min-width: 600px) {
+  .summary {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-.course {
-  display: grid;
-  grid-template-columns: minmax(40%, 4fr) minmax(60%, 6fr);
-  column-gap: 1rem;
+  .course {
+    display: grid;
+    grid-template-columns: minmax(40%, 4fr) minmax(60%, 6fr);
+    column-gap: 1rem;
+  }
+
+  .course .project {
+    font-size: 24px;
+  }
+
+  .course .leftBlock {
+    margin: 2rem 0 2rem 0;
+  }
+
+  .course .rightBlock {
+    margin: 2rem 0 2rem 0;
+  }
 }
 
-.course .project {
-  font-size: 24px;
+@media (max-width: 599px) {
+  .summary {
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .course {
+    display: grid;
+    grid-template-rows: minmax(40%, 4fr) minmax(60%, 6fr);
+    margin: 2rem 0 0 0;
+  }
+
+  .course .project {
+    font-size: 24px;
+  }
 }
 
-.course .leftBlock {
-  margin: 2rem 0 2rem 0;
-}
-
-.course .rightBlock {
-  margin: 2rem 0 2rem 0;
-}
 
 .keyword {
   color: #318A76;
