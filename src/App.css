@@ -69,6 +69,11 @@ a {
 .filters {
   margin-bottom: 1rem;
 }
+
+.course .project {
+  font-size: 24px;
+}
+
 @media (min-width: 600px) {
   .summary {
     grid-template-columns: repeat(3, 1fr);
@@ -78,10 +83,6 @@ a {
     display: grid;
     grid-template-columns: minmax(40%, 4fr) minmax(60%, 6fr);
     column-gap: 1rem;
-  }
-
-  .course .project {
-    font-size: 24px;
   }
 
   .course .leftBlock {
@@ -95,17 +96,22 @@ a {
 
 @media (max-width: 599px) {
   .summary {
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr;
   }
 
   .course {
     display: grid;
-    grid-template-rows: minmax(40%, 4fr) minmax(60%, 6fr);
+    grid-template-rows: 1fr;
     margin: 2rem 0 0 0;
   }
 
+  .course .rightBlock {
+    margin-bottom: 2rem;
+  }
+  
   .course .project {
     font-size: 24px;
+    margin-bottom: 1rem;
   }
 }
 
