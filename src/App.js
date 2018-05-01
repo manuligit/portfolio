@@ -31,9 +31,9 @@ class App extends Component {
       <div className="App">
         <header>
           <p><strong>Hi.</strong></p>
-          <p>This is a short header.</p>
           <p>My name is <span className="hilight">{this.state.name}.</span></p>
           <p>I'm from <span className="hilight">{this.state.location}.</span></p>
+          <p>Here's my <a href={`http://www.github.com/${Projects.profile.github}`}>github. </a></p>
         </header>
         <Summary tools={this.state.tools} future={this.state.future} skills={this.state.skills}/>
         <ProjectList />
