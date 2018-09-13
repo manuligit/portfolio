@@ -50,7 +50,20 @@
     { "project": "Ostoskori-page",
         "description" : "Page, where users can add, favorite and browse their favorite products. The backend of the site is connected to a MongoDB-database.",
         "keywords": ["React", "Redux", "NodeJS", "ExpressJS", "Mongoose", "ES2015", "Jest", "Supertest", "Javascript", "HTML", "CSS"],
-        "extra": "https://github.com/manuligit/fs-projekti"
+        "link": "https://github.com/manuligit/fs-projekti"
+    },
+    { 
+      "project": "2048",
+        "description" : "A simple implementation of the 2048 game.",
+        "keywords": ["Javascript", "HTML", "CSS"],
+        "link": "https://github.com/manuligit/2048",
+        "extra": "http://htmlpreview.github.io/?https://github.com/manuligit/2048/blob/master/index.html"
+    },
+    { 
+      "project": "GHC",
+        "description" : "(Will be) An electron app that allows embedding a browser game, and add tasklist and other useful features to be able to use beside it.",
+        "keywords": ["Javascript", "HTML", "CSS", "React", "electron"],
+        "link": "https://github.com/manuligit/gcp"
     }
 ],
  "profile": {
