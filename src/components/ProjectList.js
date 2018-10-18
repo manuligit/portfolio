@@ -1,5 +1,4 @@
 import React from 'react'
-import Projects from '../projects.json'
 import Course from './Course'
 
 class ProjectList extends React.Component {
@@ -29,12 +28,14 @@ class ProjectList extends React.Component {
   }
 
   render() {
+    const { filter } = this.state;
+
     const checkFilters = () => {
-      if (this.state.filter.length > 0) {
+      if (filter.length > 0) {
         return (
           <div className="filters">
             <h2>Filters</h2>
-              {this.state.filter.map((k,i) =>
+              {filter.map((k,i) =>
                 <span className="keyword" key={i} onClick={() => this.removeFilter(k)}>{k.toUpperCase()}</span>)
               }
           <br />
@@ -48,8 +49,8 @@ class ProjectList extends React.Component {
         <div className="divider"></div>
           {checkFilters()}
           <div className="divider"></div>
-          {Projects.projects.map(p => 
-            <div key={p.project}> <Course project={p} filter={this.state.filter} addFilter={this.addFilter}/>
+          {this.props.projects.map(p => 
+            <div key={p.project}> <Course project={p} filter={filter} addFilter={this.addFilter}/>
             <div className="divider"></div></div>)}
       </div>
   )}

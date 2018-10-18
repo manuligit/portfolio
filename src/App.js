@@ -2,43 +2,60 @@ import React, { Component } from 'react'
 import './App.css'
 import ProjectList from './components/ProjectList'
 import Summary from './components/Summary'
-import Projects from './projects.json'
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tools: [],
-      future: [],
-      skills: [],
-      name: '',
-      location: ''
+      json: [],
+      error: '',
+      loaded: false,
     };
   }
 
-  componentDidMount() {
-    //Read items from JSON:
-    let tools = Projects.tools
-    let future = Projects.future
-    let skills = Projects.skills
-    let name = Projects.profile.name
-    let location = Projects.profile.location
-    this.setState({ tools: tools, future: future, skills: skills, name: name, location: location })
+  async componentDidMount() {
+    // Read info from JSON:
+    this.getURL().then(res => (
+      //console.log(res),
+      this.setState({ json: res, loaded: true })));
   }
 
+  // Get the info from remote gist url
+  getURL = () => {
+    return fetch('https://gist.githubusercontent.com/manuligit/3c21ffc34b523164d800b87a291d7c4f/raw/e801c72a56b72a4807165a80dc400aab8892c5cc/projects.json')
+    .then((response) => response.json())
+    .then((responseJson) => {
+      return responseJson;
+    })
+    .catch((error) => {
+      //console.error(error);
+      this.setState({ error: error });
+    });
+ }
+
   render() {
-    return (
+    const { loaded, json } = this.state;
+    let content;
+    if (loaded) { 
+      content = (
       <div className="App">
         <header>
           <p><strong>Hi.</strong></p>
-          <p>My name is <span className="hilight">{this.state.name}.</span></p>
-          <p>I'm from <span className="hilight">{this.state.location}.</span></p>
-          <p>Here's my <a href={`http://www.github.com/${Projects.profile.github}`}>github. </a></p>
+          <p>My name is <span className="hilight">{json.profile.name}.</span></p>
+          <p>I'm from <span className="hilight">{json.profile.location}.</span></p>
+          <p>Here's my <a href={`http://www.github.com/${json.profile.github}`}>github. </a></p>
         </header>
-        <Summary tools={this.state.tools} future={this.state.future} skills={this.state.skills}/>
-        <ProjectList />
+        <Summary tools={json.tools} future={json.future} skills={json.skills}/>
+        <ProjectList projects={json.projects}/>
+      </div>)
+    } else {
+      content = (<div className="lds-dual-ring"></div>)
+    }
+    return (
+      <div>
+        {content}
       </div>
-    );
+    )
   }
 }
 
