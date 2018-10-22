@@ -22,7 +22,7 @@ class App extends Component {
 
   // Get the info from remote gist url
   getURL = () => {
-    return fetch('https://api.github.com/gists/3c21ffc34b523164d800b87a291d7c4f', { mode: "cors"})
+    return fetch('https://api.github.com/gists/3c21ffc34b523164d800b87a291d7c4f?v='+(new Date().getTime()), { mode: "cors"})
     .then((response) => {
       return response.json()})
     .then((responseJson) => {
