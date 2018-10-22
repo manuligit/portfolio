@@ -16,16 +16,17 @@ class App extends Component {
   async componentDidMount() {
     // Read info from JSON:
     this.getURL().then(res => (
-      //console.log(res),
+      console.log('res', res),
       this.setState({ json: res, loaded: true })));
   }
 
   // Get the info from remote gist url
   getURL = () => {
-    return fetch('https://gist.githubusercontent.com/manuligit/3c21ffc34b523164d800b87a291d7c4f/raw/e801c72a56b72a4807165a80dc400aab8892c5cc/projects.json')
-    .then((response) => response.json())
+    return fetch('https://api.github.com/gists/3c21ffc34b523164d800b87a291d7c4f', { mode: "cors"})
+    .then((response) => {
+      return response.json()})
     .then((responseJson) => {
-      return responseJson;
+      return JSON.parse(responseJson.files["projects.json"].content);
     })
     .catch((error) => {
       //console.error(error);
